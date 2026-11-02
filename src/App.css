@@ -1,0 +1,262 @@
+/* ==========================================================================
+   SECTION 1: GLOBAL DARK THEME & BASE STYLES
+   ========================================================================== */
+.App, body, html {
+  background-color: #0b0f19 !important;
+  color: #f8fafc !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page fade-in transition */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease-out forwards;
+}
+
+/* ==========================================================================
+   SECTION 2: HIGH-CONTRAST TEXT RULES FOR DARK CARDS & HEADINGS
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6,
+.text-dark,
+.card-title,
+.navbar-brand,
+.fw-bold {
+  color: #ffffff !important; /* Pure white for all bold headings and titles */
+}
+
+p, 
+span, 
+label, 
+.form-label, 
+.lead,
+small {
+  color: #f1f5f9 !important; /* Bright light text for general labels and paragraphs */
+  opacity: 1 !important;
+}
+
+.text-muted, 
+.text-secondary {
+  color: #cbd5e1 !important; /* Clear light slate for subtexts */
+  opacity: 1 !important;
+}
+
+.text-primary {
+  color: #60a5fa !important;
+}
+
+/* ==========================================================================
+   SECTION 3: CARDS & CONTAINERS
+   ========================================================================== */
+.bg-light, 
+.min-vh-100, 
+div.bg-light {
+  background-color: #0b0f19 !important;
+  color: #f8fafc !important;
+}
+
+.custom-card, 
+.card, 
+.bg-white, 
+div.bg-white {
+  background-color: #111827 !important;
+  color: #f8fafc !important;
+  border: 1px solid #1f2937 !important;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Inner sub-boxes (e.g., Fare Summary) */
+.card .bg-light,
+div.bg-light.p-3 {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+}
+
+/* ==========================================================================
+   SECTION 4: BUS TABLE STYLING (DARK CONTAINER + DARKER FONT FOR DATA)
+   ========================================================================== */
+.modern-table-container {
+  background: #ffffff !important; /* Clean light container for the data rows */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid #1f2937 !important;
+}
+
+.table {
+  color: #1e293b !important; /* Dark text for high readability inside the table */
+  margin-bottom: 0 !important;
+  background-color: #ffffff !important;
+}
+
+.table th {
+  background-color: #0f172a !important; /* Dark professional header row */
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 14px 16px;
+  border-bottom: 2px solid #334155 !important;
+}
+
+.table td {
+  padding: 14px 16px;
+  vertical-align: middle;
+  color: #1e293b !important; /* Darker shade font for bus name, departure, arrival, stops */
+  font-weight: 500;
+  border-color: #e2e8f0 !important;
+}
+
+.table td.text-muted, 
+.table td small {
+  color: #334155 !important; /* Dark slate for stops and ETAs */
+}
+
+.table tbody tr {
+  background-color: #ffffff !important;
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f5f9 !important;
+}
+
+code {
+  background-color: #e2e8f0 !important;
+  color: #2563eb !important;
+  border: 1px solid #cbd5e1;
+}
+
+/* ==========================================================================
+   SECTION 5: FORM INPUTS (CLEAN LIGHT INPUTS WITH DARK TEXT)
+   ========================================================================== */
+.form-control, .form-select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+  font-weight: 500;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.3) !important;
+}
+
+.form-control::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   SECTION 6: HERO SECTION & SEAT BADGES
+   ========================================================================== */
+.hero-section {
+  background: linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.85)), 
+              url('https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: #ffffff !important;
+  padding: 100px 20px;
+  border-radius: 0 0 28px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.seat-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+.seat-available { background-color: #334155; color: #f8fafc; }
+.seat-booked { background-color: #2563eb; color: #ffffff; }
+.seat-ladies { background-color: #db2777; color: #ffffff; }
+
+/* ==========================================================================
+   COMPREHENSIVE HIGH-CONTRAST FIX FOR ALL HEADINGS, SUBHEADINGS & LABELS
+   ========================================================================== */
+
+/* Forces all headings and card titles (like "TransitTrack Login", "Create Account", 
+   "Registered Bus Routes & Schedules", "Register New Bus", "Bus Seat Reservation Portal") to pure white */
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
+.custom-card h1, .custom-card h2, .custom-card h3, .custom-card h4, .custom-card h5, .custom-card h6,
+h1, h2, h3, h4, h5, h6,
+.card-title,
+.navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Forces all subheadings, descriptions, labels, and small texts (like "Sign in to monitor...", 
+   "Register to access transit routes", "Reference layout indicating...", "Fare Summary...") to bright off-white */
+.card p, .card span, .card small, .card label, .card .text-muted, .card .text-secondary,
+.custom-card p, .custom-card span, .custom-card small, .custom-card label, .custom-card .text-muted, .custom-card .text-secondary,
+p, label, small, .text-muted, .text-secondary, .form-label, .lead {
+  color: #f1f5f9 !important;
+  opacity: 1 !important;
+}
+
+/* ==========================================================================
+   TARGETED HIGH-CONTRAST OVERRIDES FOR HEADINGS, SUBHEADINGS & LABELS
+   ========================================================================== */
+
+/* 1. Login Page Headings & Subheadings */
+.card h2, 
+.card h3, 
+.card .h2, 
+.card .h3,
+h2.fw-bold.text-dark {
+  color: #ffffff !important; /* "TransitTrack Login" */
+}
+
+/* 2. Login's Register Page & Bus Register Subheadings */
+.card p, 
+.card p.text-muted, 
+.card p.small,
+p.text-muted.small,
+p.text-muted {
+  color: #e2e8f0 !important; /* "Sign in to monitor & manage schedules", "Register to access transit routes", "Fill in the schedule..." */
+  opacity: 1 !important;
+}
+
+/* 3. Bus Table Header ("📋 Registered Bus Routes & Schedules") */
+h2.fw-bold, 
+h2.text-dark,
+div.d-flex h2 {
+  color: #ffffff !important;
+}
+
+/* 4. Bus Register Page ("🚌 Register New Bus") */
+.card h2.fw-bold {
+  color: #ffffff !important;
+}
+
+/* 5. Booking Page ("🎟️ Bus Seat Reservation Portal", "Passenger & Ticket Details", "Bus Seating Layout Preview", etc.) */
+h2.text-center, 
+h4.fw-bold, 
+h5.fw-bold, 
+.card-title,
+span.fw-bold,
+div.bg-light strong,
+div.bg-light span {
+  color: #ffffff !important; /* "Bus Seat Reservation Portal", "Passenger & Ticket Details", "Bus Seating Layout Preview", "Fare Summary" */
+}
+
+/* Layout Preview & Description Texts ("Reference layout indicating window (W)...", "Select your preferred seat...") */
+.card p.text-muted, 
+.card p.smaller,
+.card div.text-muted {
+  color: #cbd5e1 !important;
+}
