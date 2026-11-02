@@ -37,3 +37,20 @@ Ensure you have **Node.js** (v14+ recommended) and **npm** installed.
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/AGNELM2002/Transit-Track-App__Bus-Schedule-and-Booking-Management.git](https://github.com/AGNELM2002/Transit-Track-App__Bus-Schedule-and-Booking-Management.git)
+
+## 📂 Project Structure
+transit-track-app/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Home.jsx           # Landing page with hero banner & service cards
+│   │   ├── Login.jsx          # Auth portal (Admin & User accounts)
+│   │   ├── BusTable.jsx       # Interactive schedule table & filtering
+│   │   ├── BusForm.jsx        # Admin route & schedule creation portal
+│   │   ├── Booking.jsx        # Ticket booking & seat layout preview
+│   │   └── BusDetail.jsx      # Route breakdown, stops, & Google Maps
+│   ├── App.jsx                # Main application routes
+│   ├── App.css                # Global dark theme CSS rules
+│   └── index.js               # Application entry point
+├── package.json
+└── README.md
