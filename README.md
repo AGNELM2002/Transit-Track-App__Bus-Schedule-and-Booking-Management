@@ -39,6 +39,8 @@ Ensure you have **Node.js** (v14+ recommended) and **npm** installed.
    git clone [https://github.com/AGNELM2002/Transit-Track-App__Bus-Schedule-and-Booking-Management.git](https://github.com/AGNELM2002/Transit-Track-App__Bus-Schedule-and-Booking-Management.git)
 
 ## 📂 Project Structure
+
+```text
 transit-track-app/
 ├── public/
 ├── src/
@@ -50,6 +52,11 @@ transit-track-app/
 │   │   ├── Booking.jsx        # Ticket booking & seat layout preview
 │   │   └── BusDetail.jsx      # Route breakdown, stops, & Google Maps
 │   ├── App.jsx                # Main application routes
+│   ├── App.css                # Global dark theme CSS rules
+│   └── index.js               # Application entry point
+├── package.json
+└── README.md
+```
 │   ├── App.css                # Global dark theme CSS rules
 │   └── index.js               # Application entry point
 ├── package.json
